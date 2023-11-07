@@ -1,0 +1,61 @@
+fibo1
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1=0;
+    int n2=1;
+    int n3;
+    int n;
+    cout<<"enter n"<<endl;
+    cin>>n;
+    cout<<n1<<n2;
+    for(int i=2;i<n;i++)
+    {
+       n3=n1+n2;
+       cout<<n3;
+       n1=n2;
+       n2=n3;
+    }
+
+    return 0;
+}
+
+
+
+
+
+fibo using Recursion
+---------------------------
+
+#include <iostream>
+
+using namespace std;
+void printfibo(int n)
+{
+    static int n1=0,n2=1,n3;
+    if(n>0)
+    {
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+        cout<<n3;
+        printfibo(n-1);
+    }
+}
+int main()
+{
+    int n;
+    cout<<"Enter N"<<endl;
+    cin>>n;
+    
+    cout<<"0"<<"1";
+    printfibo(n-2);
+
+    return 0;
+}
+
+
+
